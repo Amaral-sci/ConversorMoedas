@@ -3,7 +3,7 @@
 //  ConversorMoedas
 //
 //  Created by Jonathan Amaral on 11/12/25.
-//
+//exchangeRate
 
 import SwiftUI
 struct Extract: View {

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InfoCambio: View {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack {
             Image (.parchment)
@@ -31,20 +33,20 @@ struct InfoCambio: View {
                 
                 Extract(leftImage: .silverpenny, text: "1 OURO = 100 MOEDAS", rightImage: .copperpenny)
                 
-                Button(" OK ")
-                {
-                    
-                }
+                Button(" OK "){
+                dismiss()  }
+                
                 .buttonStyle(BorderedProminentButtonStyle() )
                 .tint(.brown.mix(with: .black, by: 0.2))
                 .padding()
                 .font(Font.largeTitle)
                 .foregroundStyle(.white)
+                }
             }
             .foregroundStyle(.black)
         }
     }
-}
+
 
 #Preview {
     InfoCambio()
